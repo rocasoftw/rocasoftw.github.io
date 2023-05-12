@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="images/dog-logo.jpg" alt="Logo de la empresa">
+        </div>
+        <div class="menu">
+          <nav>
+            <ul>
+              <li><i class="fa fa-home"></i><a href="index.html">Inicio</a></li>
+              <li><i class="fa fa-institution"></i><a href="quienes.html">Quienes somos</a></li>
+              <li><i class="fa fa-shopping-cart" style="color:blue"></i><a href="productos.html">Productos</a></li>
+              <li><i class="fa fa-envelope"></i><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <main class="contacto">
+        <form action="#" method="post" name="frmcontacto">
+            <ul>
+             <li>
+               <label for="name">Nombre:</label>
+               <input type="text" id="name" name="name">
+             </li>
+             <li>
+               <label for="mail">Correo electrónico:</label>
+               <input type="email" id="email" name="email">
+             </li>
+             <li>
+               <label for="msg">Mensaje:</label>
+               <textarea id="msg" name="message"></textarea>
+             </li>
+             <li class="button">
+                <button type="button" onclick="enviar()">Envíe su mensaje</button>
+            </li>
+              
+            </ul>
+            <div style="margin-top: 10px;" id="formerror"></div>
+        </form>
+           
+        <div style="margin: 10px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.79524183824!2d-58.41239526032714!3d-34.60545591072045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb68edf046cb%3A0x8944df2265ab45bb!2sMaquinal%20espacio%20cultural!5e0!3m2!1ses-419!2sar!4v1683751074522!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+            <button onclick="obtenerClima()" style="font-weight: bolder;">Obtener Clima</button>
+        </div>
+        <!-- Codigo QR -->
+        <!-- <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=https://puerto53.com&amp;choe=UTF-8" />  -->
+    </main>
+    <footer class="footer">
+        <div class="container">
+          
+          <div class="info">
+            <h3>Información de la empresa</h3>
+            <p>Somos una empresa dedicada a la producción y distribución de alimento para perros de alta calidad y con ingredientes naturales.</p>
+            <p>Contamos con una amplia variedad de productos para satisfacer las necesidades nutricionales de tu mascota.</p>
+          </div>
+          <div class="contact">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle Falsa 123, Ciudad Falsa, País Falso</p>
+            <p>Teléfono: +00 0000 0000</p>
+            <p>Email: contacto@example.com</p>
+          </div>
+          <div class="social">
+            <h3>Redes sociales</h3>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook-f"></i>Facebook</a></li>
+              <li><a href="#"><i class="fa fa-twitter-square"></i>Twitter</a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
+<script src="js/formerr.js"></script>
+
+</html>
