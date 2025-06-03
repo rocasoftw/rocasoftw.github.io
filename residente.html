@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>App del Residente</title>
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2em; background: #f8f8f8; }
+    #alerta { background: #fff; padding: 1em; border: 2px solid #444; border-radius: 10px; display: none; margin-top: 2em; }
+    .destino { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>App del Residente</h1>
+  <p>Esperando visitas...</p>
+
+  <div id="alerta">
+    <h2>📞 Llamada entrante</h2>
+    <p>Desde <span id="origen"></span> para el depto <span id="destino"></span></p>
+    <button onclick="responder()">Responder</button>
+  </div>
+
+  <script>
+    const socket = io("http://192.168.0.31:3000"); // cambiar IP si tu backend está en otra
+
+    socket.on("connect", () => {
+      console.log("🟢 Conectado al backend");
+    });
+
+    socket.on("llamada-entrante", (data) => {
+      document.getElementById("alerta").style.display = "block";
+      document.getElementById("origen").innerText = data.origen;
+      document.getElementById("destino").innerText = data.destino;
+    });
+
+    function responder() {
+      alert("Iniciar videollamada o abrir cámara...");
+      // Podés aquí iniciar llamada WebRTC, mostrar cámara, etc.
+    }
+  </script>
+</body>
+</html>

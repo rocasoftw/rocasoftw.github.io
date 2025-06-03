@@ -87,7 +87,7 @@
           },
           body: JSON.stringify({ destino, origen: entrada })
         });
-
+        
         if (respuesta.ok) {
           mensaje.textContent = `Llamado enviado a ${destino}. Espere respuesta.`;
         } else {
